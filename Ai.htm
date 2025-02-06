@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Social Links</title>
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <script>
+        function updateClock() {
+            const now = new Date();
+            const timeString = now.toLocaleTimeString();
+            document.getElementById('clock').textContent = timeString;
+        }
+        setInterval(updateClock, 1000);
+    </script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+            text-align: center;
+        }
+        .container {
+            text-align: center;
+        }
+        h2 {
+            margin-bottom: 20px;
+        }
+        .social-links a {
+            display: inline-block;
+            margin: 0 10px;
+            font-size: 30px;
+            color: #fff;
+            width: 50px;
+            height: 50px;
+            line-height: 50px;
+            text-align: center;
+            border-radius: 50%;
+            transition: 0.3s;
+            text-decoration: none;
+        }
+        .facebook { background: #3b5998; color: white; }
+        .google { background: #db4437; }
+        .instagram { background: #e4405f; }
+        .linkedin { background: #0077b5; }
+        .social-links a:hover {
+            opacity: 0.7;
+        }
+        #clock {
+            font-size: 20px;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body onload="updateClock()">
+    <header>
+        <div id="clock"></div>
+    </header>
+    <div class="container">
+        <h2>Follow Us</h2>
+        <div class="social-links">
+            <a href="https://www.facebook.com" target="_blank" class="facebook">F<i class="fab fa-facebook-f"></i></a>
+            <a href="https://www.google.com" target="_blank" class="google">G<i class="fab fa-google"></i></a>
+            <a href="https://www.instagram.com" target="_blank" class="instagram">I<i class="fab fa-instagram"></i></a>
+            <a href="https://www.linkedin.com" target="_blank" class="linkedin">L<i class="fab fa-linkedin-in"></i></a>
+        </div>
+    </div>
+</body>
+</html>
